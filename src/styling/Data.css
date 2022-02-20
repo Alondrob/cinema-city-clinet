@@ -1,0 +1,25 @@
+.card-text {
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    height: 100px;
+}
+
+.card {
+    display: flex;
+    margin-bottom: 30px;
+
+}
+.card-img {
+    height: 250px;
+}
+
+
+.scroll-bar {
+    overflow-x: scroll;
+}
+
+.faded-heart {
+    size: 10px;
+    color: darkslategrey;
+}
