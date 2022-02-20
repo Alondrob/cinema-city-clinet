@@ -9,7 +9,7 @@ const Cast = () => {
     const [casts, setCasts] = useState([])
     const {id} = useParams()
     const castRequest = async () => {
-        const url = `http://localhost:3000/movies/${id}/movie_actors`
+        const url = `${process.env.REACT_APP_DOMAIN}/movies/${id}/movie_actors`
         const response = await fetch(url);
         const responseJson = await response.json();
         setCasts(responseJson);

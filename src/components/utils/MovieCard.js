@@ -14,7 +14,7 @@ const MovieCard = ({movieData}) => {
 
     const addToFavorites = () => {
         let obj = { method: 'post', headers: { accept: "application/json", "content-type": "application/json", "Authorization":`Bearer ${user.token}` }, body: JSON.stringify({favorite_movie: {movie_id: movieData.id}}) };
-        let url = `http://localhost:3000/favorite_movies`;
+        let url = `${process.env.REACT_APP_DOMAIN}/favorite_movies`;
 
         fetch(url, obj)
         

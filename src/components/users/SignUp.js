@@ -10,7 +10,7 @@ const SignUp = () => {
 
     const submitForm = (event) => {
         event.preventDefault()
-        fetch(`http://localhost:3000/users`, {
+        fetch(`${process.env.REACT_APP_DOMAIN}/users`, {
             method: 'post', 
             headers: {accept: "application/json", "content-type": "application/json"},
             body: JSON.stringify(userData)

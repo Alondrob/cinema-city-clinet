@@ -12,7 +12,7 @@ const  FavoriteMovie = () => {
 
     const getFavorites = () => {
         let obj = { method: 'get', headers: { accept: "application/json", "content-type": "application/json", "Authorization": `Bearer ${user.token}` } };
-        let url = `http://localhost:3000/favorite_movies`;
+        let url = `${process.env.REACT_APP_DOMAIN}/favorite_movies`;
 
         fetch(url, obj)
         .then(res => res.json())

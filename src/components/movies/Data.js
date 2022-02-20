@@ -16,7 +16,7 @@ const Data = () => {
    
 
     const movieRequest = async () => {
-        const url = `http://localhost:3000/movies`
+        const url = `${process.env.REACT_APP_DOMAIN}/movies`
         const response = await fetch(url);
         const responseJson = await response.json();
         setMovies(responseJson);

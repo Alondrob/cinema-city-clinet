@@ -28,7 +28,7 @@ const Rating = ({movieId}) => {
                                                             }})
                         
                      };
-            let url = `http://localhost:3000/reviews`;
+        let url = `${process.env.REACT_APP_DOMAIN}/reviews`;
 
             fetch(url, object)
             .then(res => res.json())
@@ -43,7 +43,7 @@ const Rating = ({movieId}) => {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             },
         }
-        let url = `http://localhost:3000/reviews/${movieId}`;
+        let url = `${process.env.REACT_APP_DOMAIN}/reviews/${movieId}`;
 
         fetch(url, obj)
         .then(res => res.json())

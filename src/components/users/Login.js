@@ -16,7 +16,7 @@ const Login = () => {
  const submitForm = (e) => {
      e.preventDefault();
     
-    fetch('http://localhost:3000/sessions', {
+     fetch(`${process.env.REACT_APP_DOMAIN}/sessions`, {
         method: 'post',
         headers: {accept: "application/json", "content-type": "application/json"},
         body: JSON.stringify({user: userData})
