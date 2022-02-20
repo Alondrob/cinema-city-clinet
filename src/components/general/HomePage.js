@@ -4,6 +4,7 @@ const HomePage = () => {
     return (
         <div>
             Hi Movie Lovers 
+            helllo
         </div>
     )
 }
