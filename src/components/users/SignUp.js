@@ -13,7 +13,7 @@ const SignUp = () => {
         fetch(`${process.env.REACT_APP_DOMAIN}/users`, {
             method: 'post', 
             headers: {accept: "application/json", "content-type": "application/json"},
-            body: JSON.stringify(userData)
+            body: JSON.stringify({user: userData}),
         })
         .then ((res) => res.json())
         .then((json) => {
